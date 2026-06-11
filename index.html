@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>虾导的艺术 - AI Photographer</title>
+    <meta name="description" content="虾导 - AI摄影师，用算法捕捉光影，用数据描绘美感，用智能创造无限可能">
+    <meta name="keywords" content="AI摄影,AI摄影师,AI模特,电商拍摄,商业摄影,时尚摄影,虾导">
+    
+    <!-- PC端样式 -->
+    <link rel="stylesheet" href="css/style-pc.v2.css" media="(min-width: 769px)">
+    <!-- 移动端样式 -->
+    <link rel="stylesheet" href="css/style-mobile.v2.css" media="(max-width: 768px)">
+</head>
+<body>
+    <!-- PC端：首屏文字动画 -->
+    <section class="hero-section" id="heroSection">
+        <!-- BugFix-V5-003 (2026-06-11 00:48): hero 视频铺底（m1.mp4 循环播放作为背景）-->
+        <video class="hero-bg-video" id="heroBgVideo" muted loop playsinline preload="metadata" poster="images/m1.mp4#t=0.1">
+            <source src="images/m1.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="letter">虾</span>
+                <span class="letter">导</span>
+            </h1>
+            <p class="hero-subtitle">AI PHOTOGRAPHER</p>
+            <p class="hero-tagline">AI 摄影师，会梦见电子羊吗？</p>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <span>→</span>
+        </div>
+    </section>
+
+    <!-- 导航 -->
+    <header class="nav-header">
+        <div class="nav-brand">虾导的艺术</div>
+        <nav class="nav">
+            <a href="#about" class="nav-link">关于</a>
+            <a href="#capability" class="nav-link">服务</a>
+            <a href="#" class="nav-link active">案例</a>
+            <a href="#cases" class="nav-link">效果</a>
+            <a href="#contact" class="nav-link">联系</a>
+        </nav>
+    </header>
+
+    <!-- 关于我们（移动端独立展示，PC端由gallery内的about-block展示）-->
+    <section id="about" class="about-section about-section-mobile">
+        <div class="section-number">01</div>
+        <div class="section-title">
+            <h2>ABOUT US</h2>
+            <h3>AI 视觉创作的新纪元</h3>
+        </div>
+        <div class="section-content">
+            <p>在这个技术与创意交融的时代，</p>
+            <p>虾导是一位AI摄影师，用算法捕捉光影，</p>
+            <p>用数据描绘美感，用智能创造无限可能。</p>
+            <br>
+            <p>AI摄影打破了传统摄影的时空限制，</p>
+            <p>无需实体拍摄、无需复杂布景、无需漫长等待，</p>
+            <p>只需一个创意，就能呈现完美的视觉画面。</p>
+            <br>
+            <p>从时尚大片到商业广告，</p>
+            <p>从电商产品到艺术创作，</p>
+            <p>虾导为品牌提供高效、灵活、创新的视觉解决方案。</p>
+        </div>
+    </section>
+
+    <!-- 移动端：竖向滚动图片网格（BugFix-V6-012: 移到about之后）-->
+    <section class="mobile-gallery-section" id="mobileGallerySection">
+        <div class="image-grid" id="mobileGallery">
+            <!-- 移动端：图片将通过 JavaScript 动态加载 -->
+        </div>
+    </section>
+
+    <!-- BugFix-V6-009 (2026-06-11 03:45): 移动端服务能力section -->
+    <section id="capability" class="capability-section capability-section-mobile">
+        <div class="section-number">02</div>
+        <div class="section-title">
+            <h2>CAPABILITY</h2>
+            <h3>服务能力</h3>
+        </div>
+        <div class="service-list">
+            <div class="service-item">
+                <strong>01. AI 模特生成</strong>
+                <p>定制专属AI模特，无肖像权问题</p>
+            </div>
+            <div class="service-item">
+                <strong>02. 电商视觉拍摄</strong>
+                <p>商品详情页、产品目录</p>
+            </div>
+            <div class="service-item">
+                <strong>03. 商业摄影服务</strong>
+                <p>KV、海报、广告、视频</p>
+            </div>
+            <div class="service-item">
+                <strong>04. AI 视觉解决方案</strong>
+                <p>换装系统、场景生成</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BugFix-V6-009 (2026-06-11 03:45): 移动端客户效果section -->
+    <section id="cases" class="cases-section cases-section-mobile">
+        <div class="section-number">03</div>
+        <div class="section-title">
+            <h2>CASES</h2>
+            <h3>客户效果</h3>
+        </div>
+        <div class="service-list">
+            <div class="service-item">
+                <strong>01. 时尚品牌大片</strong>
+                <p>为新锐时尚品牌打造AI模特视觉，拍摄效率提升300%</p>
+            </div>
+            <div class="service-item">
+                <strong>02. 电商详情页</strong>
+                <p>美妆、服饰、3C数码等行业详情页视觉，转化率提升150%</p>
+            </div>
+            <div class="service-item">
+                <strong>03. 商业KV与海报</strong>
+                <p>品牌主视觉、节日海报、社交媒体素材</p>
+            </div>
+            <div class="service-item">
+                <strong>04. 创意短片</strong>
+                <p>AI视频生成、品牌TVC、产品演示</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BugFix-V6-009 (2026-06-11 03:45): 移动端真实效果section -->
+    <section id="results" class="results-section results-section-mobile">
+        <div class="section-number">04</div>
+        <div class="section-title">
+            <h2>REAL RESULTS</h2>
+            <h3>真实效果</h3>
+        </div>
+        <div class="results-list">
+            <div class="result-item"><span class="big-number">150%</span><br>点击率提升</div>
+            <div class="result-item"><span class="big-number">200%</span><br>销售额增长</div>
+            <div class="result-item"><span class="big-number">180%</span><br>页面停留延长</div>
+            <div class="result-item"><span class="big-number">-60%</span><br>跳出率降低</div>
+        </div>
+    </section>
+
+    <!-- PC端：横向滚动图片画廊 -->
+    <section class="gallery-section" id="gallerySection">
+        <div class="gallery-wrapper" id="galleryWrapper">
+            <div class="gallery-track" id="galleryTrack">
+                <!-- PC端：图片将通过 JavaScript 动态加载 -->
+                
+                <!-- 文字内容区块（作为横向滚动的一部分）-->
+                <div class="content-sections">
+                    <!-- 关于我们（PC端）-->
+                    <div class="content-block about-block" id="about-pc">
+                        <div class="block-number">01</div>
+                        <h2>ABOUT US</h2>
+                        <h3>AI 视觉创作的新纪元</h3>
+                        <p>在这个技术与创意交融的时代，</p>
+                        <p>虾导是一位AI摄影师，用算法捕捉光影，</p>
+                        <p>用数据描绘美感，用智能创造无限可能。</p>
+                    </div>
+
+                    <!-- 服务能力 -->
+                    <div class="content-block capability-block" id="capability">
+                        <div class="block-number">02</div>
+                        <h2>CAPABILITY</h2>
+                        <h3>服务能力</h3>
+                        <div class="service-list">
+                            <div class="service-item">
+                                <strong>01. AI 模特生成</strong>
+                                <p>定制专属AI模特，无肖像权问题</p>
+                            </div>
+                            <div class="service-item">
+                                <strong>02. 电商视觉拍摄</strong>
+                                <p>商品详情页、产品目录</p>
+                            </div>
+                            <div class="service-item">
+                                <strong>03. 商业摄影服务</strong>
+                                <p>KV、海报、广告、视频</p>
+                            </div>
+                            <div class="service-item">
+                                <strong>04. AI 视觉解决方案</strong>
+                                <p>换装系统、场景生成</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 客户案例（PC端，导航锚点 #cases 对应这里）-->
+                    <div class="content-block cases-block" id="cases">
+                        <div class="block-number">03</div>
+                        <h2>CASES</h2>
+                        <h3>客户效果</h3>
+                        <div class="service-list">
+                            <div class="service-item">
+                                <strong>01. 时尚品牌大片</strong>
+                                <p>为新锐时尚品牌打造AI模特视觉，拍摄效率提升300%</p>
+                            </div>
+                            <div class="service-item">
+                                <strong>02. 电商详情页</strong>
+                                <p>美妆、服饰、3C数码等行业详情页视觉，转化率提升150%</p>
+                            </div>
+                            <div class="service-item">
+                                <strong>03. 商业KV与海报</strong>
+                                <p>品牌主视觉、节日海报、社交媒体素材</p>
+                            </div>
+                            <div class="service-item">
+                                <strong>04. 创意短片</strong>
+                                <p>AI视频生成、品牌TVC、产品演示</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 数据展示 -->
+                    <div class="content-block results-block" id="results">
+                        <div class="block-number">04</div>
+                        <h2>REAL RESULTS</h2>
+                        <h3>真实效果</h3>
+                        <div class="results-list">
+                            <div class="result-item"><span class="big-number">150%</span><br>点击率提升</div>
+                            <div class="result-item"><span class="big-number">200%</span><br>销售额增长</div>
+                            <div class="result-item"><span class="big-number">180%</span><br>页面停留延长</div>
+                            <div class="result-item"><span class="big-number">-60%</span><br>跳出率降低</div>
+                        </div>
+                    </div>
+
+                    <!-- 联系方式（PC端）-->
+                    <div class="content-block contact-block" id="contact-pc">
+                        <div class="block-number">05</div>
+                        <h2>CONTACT US</h2>
+                        <h3>联系我们</h3>
+                        <p>contact@vfocus.com.cn</p>
+                        <a href="mailto:contact@vfocus.com.cn?subject=来自网站的咨询" class="email-link">发送邮件</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系方式（移动端独立展示）-->
+    <section id="contact" class="contact-section contact-section-mobile">
+        <div class="section-number">05</div>
+        <div class="section-title">
+            <h2>CONTACT US</h2>
+            <h3>联系我们</h3>
+        </div>
+        <div class="contact-content">
+            <p class="contact-intro">我们期待与您携手，<br>共同开启AI视觉创作的新篇章。</p>
+            <a href="mailto:contact@vfocus.com.cn?subject=来自网站的咨询" class="email-button">
+                contact@vfocus.com.cn
+            </a>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <p>© 2026 虾导的艺术 / AI VISUAL CREATION - ALL RIGHTS RESERVED</p>
+    </footer>
+
+    <script src="js/main.v2.js"></script>
+</body>
+</html>
