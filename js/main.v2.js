@@ -196,14 +196,24 @@ function loadPCImages() {
         item.dataset.index = i;
 
         const img = document.createElement('img');
-        img.src = `images/${String(i).padStart(5, '0')}.png`;
+        const imgNum = String(i).padStart(5, '0');
+        
+        // BugFix-V7-030 (2026-06-12 23:58): 支持JPEG和PNG双重格式
+        // 先尝试.jpg（压缩后的图片），如果不存在再尝试.png
+        img.src = `images/${imgNum}.jpg`;
         img.alt = `Work ${i}`;
         img.loading = 'lazy';
-        img.dataset.loaded = 'true'; // 一次性加载模式
+        img.dataset.loaded = 'true';
 
         img.onerror = function() {
-            this.style.display = 'none';
-            console.warn(`图片加载失败: ${this.src}`);
+            // 如果.jpg失败，尝试.png
+            if (this.src.endsWith('.jpg')) {
+                this.src = `images/${imgNum}.png`;
+            } else {
+                // 如果.png也失败，隐藏图片
+                this.style.display = 'none';
+                console.warn(`图片加载失败: ${this.src}`);
+            }
         };
 
         item.addEventListener('click', function() {
@@ -578,7 +588,11 @@ function loadMobileImages() {
         item.className = 'grid-item';
 
         const img = document.createElement('img');
-        img.src = `images/${String(i).padStart(5, '0')}.png`;
+        const imgNum = String(i).padStart(5, '0');
+        
+        // BugFix-V7-030 (2026-06-12 23:58): 支持JPEG和PNG双重格式
+        // 先尝试.jpg（压缩后的图片），如果不存在再尝试.png
+        img.src = `images/${imgNum}.jpg`;
         img.alt = `Work ${i}`;
         img.dataset.index = i;
         img.dataset.loaded = 'true';
@@ -587,6 +601,17 @@ function loadMobileImages() {
         img.style.width = '100%';
         img.style.height = 'auto';
         img.style.objectFit = 'cover';
+        
+        img.onerror = function() {
+            // 如果.jpg失败，尝试.png
+            if (this.src.endsWith('.jpg')) {
+                this.src = `images/${imgNum}.png`;
+            } else {
+                // 如果.png也失败，隐藏图片
+                this.style.display = 'none';
+                console.warn(`移动端图片加载失败: ${this.src}`);
+            }
+        };
 
         img.onerror = function() {
             this.style.display = 'none';
