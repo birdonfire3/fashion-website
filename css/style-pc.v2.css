@@ -370,6 +370,9 @@ body {
 
 /* PC端隐藏移动端专属区块 */
 .about-section-mobile,
+.capability-section-mobile,
+.cases-section-mobile,
+.results-section-mobile,
 .contact-section-mobile {
     display: none !important;
 }

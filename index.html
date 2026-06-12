@@ -4,6 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>虾导的艺术 - AI Photographer</title>
+    <script>
+        // BugFix-V6-023 (2026-06-11 19:30): 移动端用压缩视频
+        // 页面加载时根据设备类型切换 hero 视频
+        (function() {
+            function setHeroVideo() {
+                const heroSource = document.querySelector('#heroBgVideo source');
+                if (!heroSource) return;
+                const isMobile = window.innerWidth <= 768;
+                if (isMobile) {
+                    heroSource.src = 'images/m1-mobile.mp4';
+                    const heroVideo = document.getElementById('heroBgVideo');
+                    if (heroVideo) {
+                        heroVideo.poster = 'images/m1-mobile.mp4#t=0.1';
+                    }
+                }
+            }
+            // DOM加载后执行
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', setHeroVideo);
+            } else {
+                setHeroVideo();
+            }
+        })();
+    </script>
     <meta name="description" content="虾导 - AI摄影师，用算法捕捉光影，用数据描绘美感，用智能创造无限可能">
     <meta name="keywords" content="AI摄影,AI摄影师,AI模特,电商拍摄,商业摄影,时尚摄影,虾导">
     
@@ -16,7 +40,8 @@
     <!-- PC端：首屏文字动画 -->
     <section class="hero-section" id="heroSection">
         <!-- BugFix-V5-003 (2026-06-11 00:48): hero 视频铺底（m1.mp4 循环播放作为背景）-->
-        <video class="hero-bg-video" id="heroBgVideo" muted loop playsinline preload="metadata" poster="images/m1.mp4#t=0.1">
+        <!-- BugFix-V7-022 (2026-06-12 19:35): poster 改用图片文件 -->
+        <video class="hero-bg-video" id="heroBgVideo" muted autoplay loop playsinline webkit-playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true" x5-playsinline x5-video-orientation="portraint" preload="auto" disablePictureInPicture controlslist="nodownload noremoteplayback" poster="images/m1-poster.jpg">
             <source src="images/m1.mp4" type="video/mp4">
         </video>
         <div class="hero-content">
@@ -39,8 +64,8 @@
         <nav class="nav">
             <a href="#about" class="nav-link">关于</a>
             <a href="#capability" class="nav-link">服务</a>
-            <a href="#" class="nav-link active">案例</a>
-            <a href="#cases" class="nav-link">效果</a>
+            <a href="#cases" class="nav-link">案例</a>
+            <a href="#results" class="nav-link">效果</a>
             <a href="#contact" class="nav-link">联系</a>
         </nav>
     </header>
@@ -106,7 +131,7 @@
         <div class="section-number">03</div>
         <div class="section-title">
             <h2>CASES</h2>
-            <h3>客户效果</h3>
+            <h3>客户案例</h3>
         </div>
         <div class="service-list">
             <div class="service-item">
@@ -162,7 +187,7 @@
                     </div>
 
                     <!-- 服务能力 -->
-                    <div class="content-block capability-block" id="capability">
+                    <div class="content-block capability-block" id="capability-pc">
                         <div class="block-number">02</div>
                         <h2>CAPABILITY</h2>
                         <h3>服务能力</h3>
@@ -187,10 +212,10 @@
                     </div>
 
                     <!-- 客户案例（PC端，导航锚点 #cases 对应这里）-->
-                    <div class="content-block cases-block" id="cases">
+                    <div class="content-block cases-block" id="cases-pc">
                         <div class="block-number">03</div>
                         <h2>CASES</h2>
-                        <h3>客户效果</h3>
+                        <h3>客户案例</h3>
                         <div class="service-list">
                             <div class="service-item">
                                 <strong>01. 时尚品牌大片</strong>
@@ -212,7 +237,7 @@
                     </div>
 
                     <!-- 数据展示 -->
-                    <div class="content-block results-block" id="results">
+                    <div class="content-block results-block" id="results-pc">
                         <div class="block-number">04</div>
                         <h2>REAL RESULTS</h2>
                         <h3>真实效果</h3>

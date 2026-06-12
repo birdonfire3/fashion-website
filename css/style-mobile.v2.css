@@ -81,8 +81,15 @@ body {
 }
 
 /* 移动端图片网格（瀑布流布局）*/
+
+/* BugFix-V7-004 (2026-06-12 03:17): 减少 about 和 gallery 之间的空白（原 150px → 20px）*/
+/* BugFix-V7-018 (2026-06-12 18:49): 移动端视频与关于我们间距改为 5px */
+.about-section {
+    padding-bottom: 0 !important;  /* !important 确保不被后面的 padding: 80px 覆盖 */
+}
+
 .mobile-gallery-section {
-    padding-top: 70px;
+    padding-top: 5px;
 }
 
 .image-grid {
@@ -531,3 +538,6 @@ body {
     letter-spacing: 0.5px;
     line-height: 1.6;
 }
+
+/* ==================== BugFix-V7-003 (2026-06-12 02:18): 撤销播放按钮，回退到自动播放 ==================== */
+/* 播放按钮样式已删除 */
