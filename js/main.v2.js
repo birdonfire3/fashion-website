@@ -5,7 +5,7 @@
  */
 
 // 图片总数
-const TOTAL_IMAGES = 37;
+const TOTAL_IMAGES = 31;  // BugFix-V7-029 (2026-06-12 23:12): 从37张减少到31张，去掉倒数6张（下载太多太卡）
 
 // 设备检测（安全获取）
 const isMobile = (function() {
